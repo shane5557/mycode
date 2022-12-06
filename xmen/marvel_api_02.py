@@ -23,7 +23,7 @@ def hashbuilder(rand, privkey, pubkey):
 ## http://gateway.marvel.com/v1/public/characters
 ## ?name=Spider-Man&ts=1&apikey=1234&hash=ffd275c5130566a2916217b101f26150
 def marvelcharcall(rand, keyhash, pubkey, lookmeup):
-    r = requests.get(f"{API}?name={lookmeup}&ts={rand}&apikey={pubkey}&hash={keyhash}&")  # send an HTTP GET to this location
+    r = requests.get(f"{API}?name={lookmeup}&ts={rand}&apikey={pubkey}&hash={keyhash}")  # send an HTTP GET to this location
 
     # the marvel APIs are "flakey" at best, so check for a 200 response
     if r.status_code != 200:
