@@ -1,0 +1,6 @@
+<h1></h1>
+<ul>
+{% for g in {{groups}} %}
+    {{ g.ip }} {{ g.hostname }} {{ g.fqdn }}
+{% endfor %}
+</ul>
